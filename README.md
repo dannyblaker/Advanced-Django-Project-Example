@@ -30,11 +30,11 @@ The original website was intended for the user to learn about the product, then 
 
 The user sign up process was handled by an existing external system, therefore instead of using Django models, user signup information had to be sent to an API endpoint hosted by the external system.
 
-This project accounts for the following requirements the requested by the client:
+This project accounts for the following requirements requested by the client:
 - The product was to be initially released in Australia and New Zealand only. Therefore customers outside those countries...
-  - should be re-directed to a coming soon page (after detectig their region by IP address)
+  - should be re-directed to a "Coming soon" page (after detecting their region by IP address)
   - should be able to sign up to a "notify me" mailing list (mailchimp)
-- If a user happens to be traveling in those countries, but intends to return to their home country, this scenario should be handled by the sign up form to prevent them from signing up.
+- If a user happens to be traveling in those countries (AUS or NZ), but intends to return to their home country, this scenario should be handled by the sign up form to prevent them from signing up.
 - Prevent employees of competitors from registering by blocking email addresses using their company domain names
 - Sign up form must use Google Recaptcha to prevent bots signing up
 - The user must be informed if sign up fails by providing them with human readable error messages, such as: if an email address has already been registered, if the API is currently offline, etc.
@@ -42,7 +42,7 @@ This project accounts for the following requirements the requested by the client
 
 ## Local Setup
 
-**Step 1:** Install [python](https://www.python.org/) version 3.7
+**Step 1:** Install [Python](https://www.python.org/) version 3.7
 
 **Step 2:** Clone this project into a folder, open a terminal and navigate to the folder that contains the project.
 
@@ -53,7 +53,7 @@ This project accounts for the following requirements the requested by the client
 pip install -r requirements.txt
 ```
 
-**Step 5:** Create a file called `config.json` into the project's root directory, then add the following, replacing credentials with your own. Note: if just testing locally, you can copy and paste the below text as is.
+**Step 5:** Create a file called `config.json` in the project's root directory, then add the following, replacing credentials with your own. Note: if just testing locally, you can copy and paste the below text as is.
 
 ```json
 {
@@ -80,7 +80,7 @@ SECRET_KEY="m!)4+x^d5=mtmxhkl%_4dn9m04fen9yev$s23a%x4thvcf4y3j"
 
 **Step 7:** Visit MaxMind (https://www.maxmind.com/en/home), signup for a free account then download the following files: `GeoLite2-City.mmdb` and `GeoLite2-Country.mmdb`, unzip them, then place them in the project's root directory.
 
-**Step 7:** Start the development server
+**Step 8:** Start the development server
 
 ```bash
 python manage.py runserver
