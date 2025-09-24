@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Horizon</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+    <link href="{% static 'css/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/fontawesome-free/css/all.min.css' %} " rel="stylesheet">
+    <link href="{% static 'css/intlTelInput.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/purecookie.css' %}"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'css/bootstrap/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'js/intlTelInput.js' %}"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="{% static 'js/purecookie.js' %}" async></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    <style>
+        body, html {
+            margin: 0;
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    </style>
+
+</head>
+
+<body>
+{% if result == 201 %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-success" role="alert" style="display:block">Success! Please check
+            your email and click on the verification link to get started!</p>
+    </div>
+{% elif result == 409 %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-danger" role="alert" style="display:block">This email has already
+            been registered. Please try another one. If you believe this is a mistake, please <a href="#">contact support</a>.</p>
+    </div>
+{% elif result == 500 or result == 502 or result == 503 or result == 404 or result == 403 or result == 400 %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Creating accounts is
+            currently unavailable. Our team is working top amend this issue as soon as possible! Please try again in
+            a little while.</p>
+    </div>
+{% else %}
+
+{% endif %}
+
+
+<!-- Register Interest by specifying country : feedback -->
+{% if result_mailchimp == "success" %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-success" role="alert" style="display:block">Thanks for your
+            interest! We'll notify you as soon as Horizon becomes available in your country.</p>
+    </div>
+{% elif result_mailchimp == "fail" %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Thanks! You are already
+            subscribed.</p>
+    </div>
+{% else %}
+
+{% endif %}
+
+
+{% if result_validation == "server_error" %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-success" role="alert" style="display:block">Unfortunately account
+            creation is unavailable at this time.</p>
+    </div>
+{% elif result_validation == "recaptcha_error" %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Recaptcha failed. Did
+            you complete the form Recaptcha? Please try again!</p>
+    </div>
+{% elif result_validation == "not_valid" %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Please use a valid
+            email address</p>
+    </div>
+{% elif result_validation == "free_email" %}
+    <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+        <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Please use a company
+            email address</p>
+    </div>
+{% else %}
+
+{% endif %}
+
+<div class="container" style="padding-top: 100px">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form id="form-submit" method="POST" action="{% url 'not_available_in_your_country' %}">
+                {% csrf_token %}
+
+                <div class="other-country-node">
+                    &nbsp;
+                    <p>Thank you for your interest in Horizon! Horizon is currently only available
+                        in the following countries: Australia, and New Zealand</p>
+                    &nbsp;
+                    <p>Please enter your country below and we'll let you know as soon as it becomes available.
+                        Thanks!</p>
+                    &nbsp;
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control rounded-pill" placeholder="First name"
+                           name="first_name" required>
+                </div>
+                <div class="form-group" id="last-name-field">
+                    <input type="text" class="form-control rounded-pill" placeholder="Last name"
+                           name="last_name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control rounded-pill" placeholder="Your Email Address *"
+                           name="email" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control rounded-pill" type="tel" id="phone" name="phone"
+                           placeholder="Your phone number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control rounded-pill"
+                           placeholder="Your Company or Organisation *" name="company_name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control rounded-pill" name="your_other_country"
+                           placeholder="Your Country Name" required>
+                </div>
+                <input type="submit" class="btn btn-primary btn-block rounded-pill" value="Notify Me">
+            </form>
+            <br>
+            <p>Are you in Australia or New Zealand and still seeing this page?
+                Please check that you're not connected to a VPN and kindly <a href="#">contact us</a>
+                if you experience any issues.</p>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#message').fadeIn(2000).delay(8000).fadeOut(500);
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+
+</script>
+
+
+</body>
+</html>
+
+

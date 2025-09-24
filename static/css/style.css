@@ -1,0 +1,418 @@
+@media only screen and (min-width: 580px) {
+    .mobile_suggestion {
+        display: None;
+    }
+
+}
+
+.ul-faq {
+    padding-left: 30px;
+}
+.mobile-lang-text{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: smaller;
+}
+
+#business_number_description {
+    padding-top: 2%;
+}
+.cookiealert {
+    position: fixed;
+    /*bottom:0%;*/
+    bottom: 40px;
+    left: 10%;
+    right: 10%;
+    width: 30%;
+    /*padding: 5px 14px;*/
+    color: #ecf0f1;
+    background: #212327;
+    opacity: 0.5;
+}
+
+.iti__flag {
+    /*background-image: url('{% static '../img/flags.png' %}')*/
+    background-image: url('../img/flags.png')
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../img/flags@2x.png");}
+}
+
+/*loader*/
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 100%;
+  border-top: 6px solid #ff1493;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  /*position: fixed;*/
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+}
+
+
+
+.table_row_hover:hover {
+    background-color: #fff2fa;
+}
+
+.highlighted {
+    background-color: #fff2fa;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+}
+
+.dropdown-toggle::after {
+    transition: transform 0.15s linear;
+}
+
+.navbar-nav > li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+body {
+    font-family: "Segoe UI", 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h3,
+h5 {
+    font-family: "Segoe UI", 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #ff1493;
+    border-color: #ff1493;
+}
+
+.btn-primary:hover {
+    background-color: #ff59b1;
+    border-color: #ff59b1;
+}
+
+.btn:focus {
+    background-color: #ff59b1;
+    border-color: #ff59b1;
+    color: #ffffff;
+}
+
+.btn:active {
+    background-color: #ff59b1;
+    border-color: #ff59b1;
+    color: #ffffff;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #ff59b1;
+    border-color: #ff59b1;
+}
+
+
+.fa-check-circle, .fa-cloud, .fa-home {
+    color: #ff1493;
+    font-size: 28px;
+    /*text-align: center;*/
+}
+
+.plan_table_headers {
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+}
+
+.text-muted {
+    color: hotpink;
+}
+
+a {
+    color: hotpink;
+}
+
+a:hover {
+    color: #ff95c8;
+}
+
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+
+#footercopyright {
+    color: #c1bebe;
+}
+
+.custom_heading {
+    font-size: 50px;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.custom_heading span {
+    color: #ff1493;
+}
+
+.flex_custom_h .card {
+    height: 400px;
+}
+
+.custom_btn_design {
+    height: 54px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.start_trail_design p {
+    display: block;
+    color: #616161;
+    font-size: 26px;
+    width: 100%;
+    padding: 50px 0;
+    font-weight: 700;
+}
+
+.faq-links {
+    color: #575757;
+}
+
+.faq-links:hover {
+    color: #e90466;
+}
+
+.btn-link.focus, .btn-link:focus {
+    color: #fbfbfb;
+}
+.btn-link {
+    color: #3b3b3b;
+    text-decoration: None;
+}
+
+.btn-link:hover {
+    color: #454545;
+}
+
+
+
+.start_trail_design_creditcard p {
+    display: block;
+    color: #616161;
+    font-size: 20px;
+    width: 100%;
+    padding: 50px 0;
+    font-weight: 700;
+}
+
+.tooltip > .tooltip-inner {
+    Color: #ffb2df;
+}
+
+.start_trail_design_compareplan {
+    display: block;
+    color: #707070;
+    font-size: 38px;
+    width: 100%;
+    padding: 0 0 50px 0;
+    font-weight: 400;
+}
+
+.custom_price_p {
+    font-size: 14px;
+    color: #aaa;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.custom_price_p strong {
+    color: #aaa;
+}
+
+.custom_price_p span {
+    color: #FE7BB8;
+    font-weight: bold;
+}
+
+
+.custom_tb td {
+    vertical-align: middle;
+}
+
+.absolute_pos {
+    position: absolute;
+    top: 43%;
+    right: 20px;
+    left: 20px;
+}
+
+.smallr_text {
+    font-weight: 400;
+    font-size: 26px;
+    margin: 0px
+}
+
+
+
+span.seefetured {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 0;
+    text-transform: uppercase;
+    color: #ff1493;
+    font-weight: 700;
+    display: none;
+    vertical-align: middle;
+}
+
+span.seefetured svg {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -2px;
+}
+
+
+@media (max-width: 1024px) {
+    .flex_custom_h .card {
+        margin-right: 5px !important;
+        margin-left: 5px !important;
+        margin-bottom: 60px !important;
+    }
+}
+
+/*p { margin:0 }*/
+.user_per_month {
+    margin: 0;
+    font-size: 14px;
+}
+
+.smallr_text strong {
+    color: #616161;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+@media (max-width: 1023px) {
+    span.seefetured {
+        display: inline-block;
+    }
+
+    .compare-plans {
+        display: none;
+    }
+
+    .custom_heading {
+        font-size: 37px;
+        padding: 30px 0;
+    }
+
+    .card-header {
+        padding: 1.2rem 1.25rem;
+    }
+
+    .absolute_pos {
+        font-size: 15px;
+        position: relative;
+        right: 0;
+        left: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .start_trail_design p {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+
+    .start_trail_design_creditcard p {
+        padding: 30px 0;
+    }
+
+    .flex_custom_h {
+        display: block;
+    }
+
+    .flex_custom_h .card {
+        height: auto;
+    }
+
+    .color_pink {
+        color: #ff1493;
+    }
+
+    .se_table i {
+        font-size: 16px !important;
+    }
+}
+
+.mobile-price-card{
+    padding-bottom: 5%;
+}
+
+.form_modal {
+    padding: 40px 20px 20px;
+}
+
+.other-country-note {
+    font-style: italic;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.other-country-frm {
+    display: none;
+}
+
+#signup-form-container {
+    padding-bottom: 30px;
+}

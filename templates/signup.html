@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- API feedback -->
+{% if result == 201 %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-success" role="alert" style="display:block">Success! Please check
+        your email and click on the verification link to get started!</p>
+</div>
+{% elif result == 409 %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-danger" role="alert" style="display:block">This email has already
+        been registered. Kindly try another one. If you believe this is a mistake, please <a
+            href="#">contact support</a>.</p>
+</div>
+{% elif result == 500 or result == 502 or result == 503 or result == 404 or result == 403 or result == 400 %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Creating accounts is
+        currently unavailable. Our team is working to amend this issue as soon as possible! Please try again in
+        a little while - or <a href="#">contact support</a></p>
+</div>
+{% else %}
+
+{% endif %}
+
+
+<!-- Register Interest by specifying country : feedback -->
+{% if result_mailchimp == "success" %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-success" role="alert" style="display:block">Thanks for your
+        interest! We'll notify you as soon as Horizon becomes available in your country. </p>
+</div>
+{% elif result_mailchimp == "fail" %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Thanks! You are already
+        subscribed.</p>
+</div>
+{% else %}
+
+{% endif %}
+
+
+{% if result_validation == "server_error" %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Unfortunately account
+        creation is unavailable at this time.</p>
+</div>
+{% elif result_validation == "recaptcha_error" %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Recaptcha failed. Did
+        you complete the form Recaptcha? Please try again!</p>
+</div>
+{% elif result_validation == "not_valid" %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Please use a valid
+        email address</p>
+</div>
+{% elif result_validation == "free_email" %}
+<div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+    <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Please use a company
+        email address</p>
+</div>
+{% else %}
+
+{% endif %}
+
+<div class="container" id="signup-form-container">
+
+    <h3 style="color: #9c9c9c">Create your Free account</h3>
+    <br>
+
+    <form id="form-submit" method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" class="form-control rounded-pill ph-ignore-input" placeholder="First name *"
+                name="first_name" style="width: 300px;" required>
+        </div>
+        <div class="form-group" id="last-name-field">
+            <input type="text" class="form-control rounded-pill ph-ignore-input" placeholder="Last name *"
+                name="last_name" style="width: 300px;" required>
+        </div>
+
+        <div class="form-group">
+            <input type="email" class="form-control rounded-pill ph-ignore-input"
+                placeholder="Your Company Email Address *" name="email" required>
+            <p class="text-muted" id="email_description" style="padding-top: 10px;">Note: Kindly
+                enter a valid company email address. We don't currently accept email addresses from
+                free domains (such as "@gmail.com" or "@yahoo.com"). Thank you!</p>
+        </div>
+        <div class="form-group">
+            <input class="form-control rounded-pill ph-ignore-input" type="tel" id="phone" name="phone"
+                style="width: 300px" placeholder="Your phone number (optional)">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control rounded-pill ph-ignore-input"
+                placeholder="Your Company or Organisation (optional)" name="company_name">
+        </div>
+        <div class="form-group">
+            <select id="country" class="form-control rounded-pill" name="country" required>
+                <option selected value="">Your Country *</option>
+                <option value="australia">Australia</option>
+                <option value="new-zealand">New Zealand</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control rounded-pill ph-ignore-input"
+                placeholder="Your Business Number (optional)" name="business_number">
+            <p class="text-muted" id="business_number_description">For example, if your organisation
+                is registered in Australia, please provide your ABN</p>
+        </div>
+        <div class="form-group">
+            <select id="industry" class="form-control rounded-pill" name="industry" required>
+                <option selected value="">Select Industry</option>
+                <option value="compliance">Compliance</option>
+                <option value="education">Education</option>
+                <option value="finance ">Finance</option>
+                <option value="health ">Health</option>
+                <option value="insurance">Insurance</option>
+                <option value="law-enforcement">Law Enforcement</option>
+                <option value="legal">Legal</option>
+                <option value="research">Research</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group other-industry-frm">
+            <input type="text" class="form-control rounded-pill ph-ignore-input" name="your_other_industry"
+                placeholder="Your Industry (optional)">
+        </div>
+        <input type="hidden" id="phone_number_for_request" name="phone_number_for_request" value="12345678">
+        {# enable recaptcha#}
+        {# &nbsp;#}
+        {# <div class="g-recaptcha" data-sitekey="{{ recaptcha }}"></div>#}
+        {# &nbsp;#}
+        <input type="submit" class="btn btn-primary btn-block rounded-pill ph-ignore-input" value="Submit"
+            id="btn-submit-form">
+        <br>
+        <div class="container" id="loading_message">
+            <div class="row">
+                <div class="loader" id="load_ring"></div>
+            </div>
+            <div class="row">
+                <p style="color: #ff1493">Processing... Please stay on this page.</p>
+            </div>
+            <br>
+        </div>
+        <p style="font-size: smaller; padding-top: 10px"><img src="{% static 'img/ssl.png' %}"
+                alt="">&nbsp;&nbsp;&nbsp;&nbsp;This site is secured with AES-256 encryption.</p>
+
+
+        <p style="font-size: smaller; padding-top: 10px"><img src="{% static 'img/padlock.png' %}"
+                alt="">&nbsp;&nbsp;&nbsp;&nbsp;We respect your
+            <a href="#">privacy</a>. Your details will be kept private.
+        </p>
+
+
+
+        <br>
+        <p>Already have an account? <a href="#" target="_blank">Sign in
+                here</a></p>
+        <br>
+
+        <div class="other-country-note other-country-frm">
+            <p>Thank you for your interest in Horizon! Horizon is currently only
+                available in the following countries: Australia, and New Zealand</p>
+            <p>Please select your country below and we'll let you know as soon as it becomes
+                available. Many Thanks!</p>
+        </div>
+        <div class="form-group other-country-frm">
+            <input type="text" class="form-control rounded-pill ph-ignore-input" name="your_other_country"
+                placeholder="Your Country Name*">
+        </div>
+        <input type="submit" class="btn btn-primary btn-block rounded-pill other-country-frm ph-ignore-input"
+            value="Notify Me">
+    </form>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+    $("#country").change(function () {
+        if ($(this).val() === "other") {
+            $('.other-country-frm').show();
+        } else {
+            $('.other-country-frm').hide();
+        }
+    });
+
+    $("#industry").change(function () {
+        if ($(this).val() === "other") {
+            $('.other-industry-frm').show();
+        } else {
+            $('.other-industry-frm').hide();
+        }
+    });
+
+
+    $(document).ready(function () {
+        $('.other-industry-frm').hide();
+
+        $("#country").change(function () {
+            if ($(this).val() === "other") {
+                $('.other-country-frm').show();
+            } else {
+                $('.other-country-frm').hide();
+            }
+        });
+
+        $("#industry").change(function () {
+            if ($(this).val() === "other") {
+                $('.other-industry-frm').show();
+            } else {
+                $('.other-industry-frm').hide();
+            }
+        });
+
+        var input = document.querySelector("#phone");
+        var iti = window.intlTelInput(input, {
+            // any initialisation options go here
+            initialCountry: "AU",
+        });
+
+        $("#phone").change(function () {
+            var number = iti.getNumber();
+            var countryData = iti.getSelectedCountryData();
+            $('#phone_number_for_request').prop('value', number);
+        });
+
+
+        $("#phone").focus(function () {
+            var countryData = iti.getSelectedCountryData();
+
+            current_country = countryData['name']
+            var allowed_countries = ["Australia", "New Zealand"];
+
+            country_passed = false
+
+            allowed_countries.forEach(check_countries);
+
+            function check_countries(value) {
+                if (current_country === value) {
+                    country_passed = true
+                }
+            }
+
+            if (country_passed === false) {
+                $('.other-country-frm').show();
+            } else {
+                $('.other-country-frm').hide();
+            }
+        });
+
+    });
+
+
+    $('.seefetured').click(function () {
+        if ($(this).parent().hasClass('twobutton') === false) {
+            $(this).parent().find('.table_information').toggle();
+            $(this).toggleClass('active');
+        } else if ($(this).parent().hasClass('twobutton') === true) {
+            $(this).parent().find('.box_wrap_i').toggle();
+            $(this).toggleClass('active');
+        }
+    });
+
+    $('#loading_message').hide()
+    $("#load_ring").hide();
+
+
+    $('#message').fadeIn(2000).delay(8000).fadeOut(500);
+    $('[data-toggle="tooltip"]').tooltip();
+
+
+    $('#btn-submit-form').click(function () {
+        $('#load_ring').show();
+        $('#loading_message').show()
+    });
+
+
+    $('#exampleModal').on('shown.bs.modal', function (e) {
+        $('.custom_btn_design').one('focus', function (e) {
+            $(this).blur();
+        });
+    });
+
+</script>
+
+
+{% endblock content %}

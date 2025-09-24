@@ -1,0 +1,8 @@
+.env
+db.sqlite3
+__pycache__/
+.venv/
+config.json
+debug.log
+GeoLite2-City.mmdb
+GeoLite2-Country.mmdb

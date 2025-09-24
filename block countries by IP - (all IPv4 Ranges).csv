@@ -1,0 +1,253 @@
+﻿country_name,softblock,hardblock,geoname_id,locale_code,continent_code,continent_name,country_iso_code,is_in_european_union
+Afghanistan,Y,,1149361,en,AS,Asia,AF,0
+Åland,Y,,661882,en,EU,Europe,AX,1
+Albania,Y,,783754,en,EU,Europe,AL,0
+Algeria,Y,,2589581,en,AF,Africa,DZ,0
+American Samoa,Y,,5880801,en,OC,Oceania,AS,0
+Andorra,Y,,3041565,en,EU,Europe,AD,0
+Angola,Y,,3351879,en,AF,Africa,AO,0
+Anguilla,Y,,3573511,en,NA,North America,AI,0
+Antarctica,Y,,6697173,en,AN,Antarctica,AQ,0
+Antigua and Barbuda,Y,,3576396,en,NA,North America,AG,0
+Argentina,Y,,3865483,en,SA,South America,AR,0
+Armenia,Y,,174982,en,AS,Asia,AM,0
+Aruba,Y,,3577279,en,NA,North America,AW,0
+Australia,,,2077456,en,OC,Oceania,AU,0
+Austria,Y,,2782113,en,EU,Europe,AT,1
+Azerbaijan,Y,,587116,en,AS,Asia,AZ,0
+Bahamas,Y,,3572887,en,NA,North America,BS,0
+Bahrain,Y,,290291,en,AS,Asia,BH,0
+Bangladesh,Y,,1210997,en,AS,Asia,BD,0
+Barbados,Y,,3374084,en,NA,North America,BB,0
+Belarus,Y,,630336,en,EU,Europe,BY,0
+Belgium,Y,,2802361,en,EU,Europe,BE,1
+Belize,Y,,3582678,en,NA,North America,BZ,0
+Benin,Y,,2395170,en,AF,Africa,BJ,0
+Bermuda,Y,,3573345,en,NA,North America,BM,0
+Bhutan,Y,,1252634,en,AS,Asia,BT,0
+Bolivia,Y,,3923057,en,SA,South America,BO,0
+"Bonaire, Sint Eustatius, and Saba",Y,,7626844,en,NA,North America,BQ,0
+Bosnia and Herzegovina,Y,,3277605,en,EU,Europe,BA,0
+Botswana,Y,,933860,en,AF,Africa,BW,0
+Bouvet Island,Y,,3371123,en,AN,Antarctica,BV,0
+Brazil,Y,,3469034,en,SA,South America,BR,0
+British Indian Ocean Territory,Y,,1282588,en,AS,Asia,IO,0
+British Virgin Islands,Y,,3577718,en,NA,North America,VG,0
+Brunei,Y,,1820814,en,AS,Asia,BN,0
+Bulgaria,Y,,732800,en,EU,Europe,BG,1
+Burkina Faso,Y,,2361809,en,AF,Africa,BF,0
+Burundi,Y,,433561,en,AF,Africa,BI,0
+Cabo Verde,Y,,3374766,en,AF,Africa,CV,0
+Cambodia,Y,,1831722,en,AS,Asia,KH,0
+Cameroon,Y,,2233387,en,AF,Africa,CM,0
+Canada,Y,,6251999,en,NA,North America,CA,0
+Cayman Islands,Y,,3580718,en,NA,North America,KY,0
+Central African Republic,Y,,239880,en,AF,Africa,CF,0
+Chad,Y,,2434508,en,AF,Africa,TD,0
+Chile,Y,,3895114,en,SA,South America,CL,0
+China,Y,,1814991,en,AS,Asia,CN,0
+Christmas Island,Y,,2078138,en,OC,Oceania,CX,0
+Cocos [Keeling] Islands,Y,,1547376,en,AS,Asia,CC,0
+Colombia,Y,,3686110,en,SA,South America,CO,0
+Comoros,Y,,921929,en,AF,Africa,KM,0
+Congo Republic,Y,,2260494,en,AF,Africa,CG,0
+Cook Islands,Y,,1899402,en,OC,Oceania,CK,0
+Costa Rica,Y,,3624060,en,NA,North America,CR,0
+Croatia,Y,,3202326,en,EU,Europe,HR,1
+Cuba,Y,,3562981,en,NA,North America,CU,0
+Curaçao,Y,,7626836,en,NA,North America,CW,0
+Cyprus,Y,,146669,en,EU,Europe,CY,1
+Czechia,Y,,3077311,en,EU,Europe,CZ,1
+Denmark,Y,,2623032,en,EU,Europe,DK,1
+Djibouti,Y,,223816,en,AF,Africa,DJ,0
+Dominica,Y,,3575830,en,NA,North America,DM,0
+Dominican Republic,Y,,3508796,en,NA,North America,DO,0
+DR Congo,Y,,203312,en,AF,Africa,CD,0
+East Timor,Y,,1966436,en,OC,Oceania,TL,0
+Ecuador,Y,,3658394,en,SA,South America,EC,0
+Egypt,Y,,357994,en,AF,Africa,EG,0
+El Salvador,Y,,3585968,en,NA,North America,SV,0
+Equatorial Guinea,Y,,2309096,en,AF,Africa,GQ,0
+Eritrea,Y,,338010,en,AF,Africa,ER,0
+Estonia,Y,,453733,en,EU,Europe,EE,1
+Eswatini,Y,,934841,en,AF,Africa,SZ,0
+Ethiopia,Y,,337996,en,AF,Africa,ET,0
+Falkland Islands,Y,,3474414,en,SA,South America,FK,0
+Faroe Islands,Y,,2622320,en,EU,Europe,FO,0
+Federated States of Micronesia,Y,,2081918,en,OC,Oceania,FM,0
+Fiji,Y,,2205218,en,OC,Oceania,FJ,0
+Finland,Y,,660013,en,EU,Europe,FI,1
+France,Y,,3017382,en,EU,Europe,FR,1
+French Guiana,Y,,3381670,en,SA,South America,GF,1
+French Polynesia,Y,,4030656,en,OC,Oceania,PF,0
+French Southern Territories,Y,,1546748,en,AN,Antarctica,TF,0
+Gabon,Y,,2400553,en,AF,Africa,GA,0
+Gambia,Y,,2413451,en,AF,Africa,GM,0
+Georgia,Y,,614540,en,AS,Asia,GE,0
+Germany,Y,,2921044,en,EU,Europe,DE,1
+Ghana,Y,,2300660,en,AF,Africa,GH,0
+Gibraltar,Y,,2411586,en,EU,Europe,GI,1
+Greece,Y,,390903,en,EU,Europe,GR,1
+Greenland,Y,,3425505,en,NA,North America,GL,0
+Grenada,Y,,3580239,en,NA,North America,GD,0
+Guadeloupe,Y,,3579143,en,NA,North America,GP,1
+Guam,Y,,4043988,en,OC,Oceania,GU,0
+Guatemala,Y,,3595528,en,NA,North America,GT,0
+Guernsey,Y,,3042362,en,EU,Europe,GG,0
+Guinea,Y,,2420477,en,AF,Africa,GN,0
+Guinea-Bissau,Y,,2372248,en,AF,Africa,GW,0
+Guyana,Y,,3378535,en,SA,South America,GY,0
+Haiti,Y,,3723988,en,NA,North America,HT,0
+Hashemite Kingdom of Jordan,Y,,248816,en,AS,Asia,JO,0
+Heard Island and McDonald Islands,Y,,1547314,en,AN,Antarctica,HM,0
+Honduras,Y,,3608932,en,NA,North America,HN,0
+Hong Kong,Y,,1819730,en,AS,Asia,HK,0
+Hungary,Y,,719819,en,EU,Europe,HU,1
+Iceland,Y,,2629691,en,EU,Europe,IS,0
+India,Y,,1269750,en,AS,Asia,IN,0
+Indonesia,Y,,1643084,en,AS,Asia,ID,0
+Iran,Y,,130758,en,AS,Asia,IR,0
+Iraq,Y,,99237,en,AS,Asia,IQ,0
+Ireland,Y,,2963597,en,EU,Europe,IE,1
+Isle of Man,Y,,3042225,en,EU,Europe,IM,0
+Israel,Y,,294640,en,AS,Asia,IL,0
+Italy,Y,,3175395,en,EU,Europe,IT,1
+Ivory Coast,Y,,2287781,en,AF,Africa,CI,0
+Jamaica,Y,,3489940,en,NA,North America,JM,0
+Japan,Y,,1861060,en,AS,Asia,JP,0
+Jersey,Y,,3042142,en,EU,Europe,JE,0
+Kazakhstan,Y,,1522867,en,AS,Asia,KZ,0
+Kenya,Y,,192950,en,AF,Africa,KE,0
+Kiribati,Y,,4030945,en,OC,Oceania,KI,0
+Kosovo,Y,,831053,en,EU,Europe,XK,0
+Kuwait,Y,,285570,en,AS,Asia,KW,0
+Kyrgyzstan,Y,,1527747,en,AS,Asia,KG,0
+Laos,Y,,1655842,en,AS,Asia,LA,0
+Latvia,Y,,458258,en,EU,Europe,LV,1
+Lebanon,Y,,272103,en,AS,Asia,LB,0
+Lesotho,Y,,932692,en,AF,Africa,LS,0
+Liberia,Y,,2275384,en,AF,Africa,LR,0
+Libya,Y,,2215636,en,AF,Africa,LY,0
+Liechtenstein,Y,,3042058,en,EU,Europe,LI,0
+Luxembourg,Y,,2960313,en,EU,Europe,LU,1
+Macao,Y,,1821275,en,AS,Asia,MO,0
+Madagascar,Y,,1062947,en,AF,Africa,MG,0
+Malawi,Y,,927384,en,AF,Africa,MW,0
+Malaysia,Y,,1733045,en,AS,Asia,MY,0
+Maldives,Y,,1282028,en,AS,Asia,MV,0
+Mali,Y,,2453866,en,AF,Africa,ML,0
+Malta,Y,,2562770,en,EU,Europe,MT,1
+Marshall Islands,Y,,2080185,en,OC,Oceania,MH,0
+Martinique,Y,,3570311,en,NA,North America,MQ,1
+Mauritania,Y,,2378080,en,AF,Africa,MR,0
+Mauritius,Y,,934292,en,AF,Africa,MU,0
+Mayotte,Y,,1024031,en,AF,Africa,YT,1
+Mexico,Y,,3996063,en,NA,North America,MX,0
+Monaco,Y,,2993457,en,EU,Europe,MC,0
+Mongolia,Y,,2029969,en,AS,Asia,MN,0
+Montenegro,Y,,3194884,en,EU,Europe,ME,0
+Montserrat,Y,,3578097,en,NA,North America,MS,0
+Morocco,Y,,2542007,en,AF,Africa,MA,0
+Mozambique,Y,,1036973,en,AF,Africa,MZ,0
+Myanmar,Y,,1327865,en,AS,Asia,MM,0
+Namibia,Y,,3355338,en,AF,Africa,NA,0
+Nauru,Y,,2110425,en,OC,Oceania,NR,0
+Nepal,Y,,1282988,en,AS,Asia,NP,0
+Netherlands,Y,,2750405,en,EU,Europe,NL,1
+New Caledonia,Y,,2139685,en,OC,Oceania,NC,0
+New Zealand,,,2186224,en,OC,Oceania,NZ,0
+Nicaragua,Y,,3617476,en,NA,North America,NI,0
+Niger,Y,,2440476,en,AF,Africa,NE,0
+Nigeria,Y,,2328926,en,AF,Africa,NG,0
+Niue,Y,,4036232,en,OC,Oceania,NU,0
+Norfolk Island,Y,,2155115,en,OC,Oceania,NF,0
+North Korea,Y,,1873107,en,AS,Asia,KP,0
+North Macedonia,Y,,718075,en,EU,Europe,MK,0
+Northern Mariana Islands,Y,,4041468,en,OC,Oceania,MP,0
+Norway,Y,,3144096,en,EU,Europe,NO,0
+Oman,Y,,286963,en,AS,Asia,OM,0
+Pakistan,Y,,1168579,en,AS,Asia,PK,0
+Palau,Y,,1559582,en,OC,Oceania,PW,0
+Palestine,Y,,6254930,en,AS,Asia,PS,0
+Panama,Y,,3703430,en,NA,North America,PA,0
+Papua New Guinea,Y,,2088628,en,OC,Oceania,PG,0
+Paraguay,Y,,3437598,en,SA,South America,PY,0
+Peru,Y,,3932488,en,SA,South America,PE,0
+Philippines,Y,,1694008,en,AS,Asia,PH,0
+Pitcairn Islands,Y,,4030699,en,OC,Oceania,PN,0
+Poland,Y,,798544,en,EU,Europe,PL,1
+Portugal,Y,,2264397,en,EU,Europe,PT,1
+Puerto Rico,Y,,4566966,en,NA,North America,PR,0
+Qatar,Y,,289688,en,AS,Asia,QA,0
+Republic of Lithuania,Y,,597427,en,EU,Europe,LT,1
+Republic of Moldova,Y,,617790,en,EU,Europe,MD,0
+Réunion,Y,,935317,en,AF,Africa,RE,1
+Romania,Y,,798549,en,EU,Europe,RO,1
+Russia,Y,,2017370,en,EU,Europe,RU,0
+Rwanda,Y,,49518,en,AF,Africa,RW,0
+Saint Barthélemy,Y,,3578476,en,NA,North America,BL,0
+Saint Helena,Y,,3370751,en,AF,Africa,SH,0
+Saint Lucia,Y,,3576468,en,NA,North America,LC,0
+Saint Martin,Y,,3578421,en,NA,North America,MF,1
+Saint Pierre and Miquelon,Y,,3424932,en,NA,North America,PM,0
+Saint Vincent and the Grenadines,Y,,3577815,en,NA,North America,VC,0
+Samoa,Y,,4034894,en,OC,Oceania,WS,0
+San Marino,Y,,3168068,en,EU,Europe,SM,0
+São Tomé and Príncipe,Y,,2410758,en,AF,Africa,ST,0
+Saudi Arabia,Y,,102358,en,AS,Asia,SA,0
+Senegal,Y,,2245662,en,AF,Africa,SN,0
+Serbia,Y,,6290252,en,EU,Europe,RS,0
+Seychelles,Y,,241170,en,AF,Africa,SC,0
+Sierra Leone,Y,,2403846,en,AF,Africa,SL,0
+Singapore,Y,,1880251,en,AS,Asia,SG,0
+Sint Maarten,Y,,7609695,en,NA,North America,SX,0
+Slovakia,Y,,3057568,en,EU,Europe,SK,1
+Slovenia,Y,,3190538,en,EU,Europe,SI,1
+Solomon Islands,Y,,2103350,en,OC,Oceania,SB,0
+Somalia,Y,,51537,en,AF,Africa,SO,0
+South Africa,Y,,953987,en,AF,Africa,ZA,0
+South Georgia and the South Sandwich Islands,Y,,3474415,en,AN,Antarctica,GS,0
+South Korea,Y,,1835841,en,AS,Asia,KR,0
+South Sudan,Y,,7909807,en,AF,Africa,SS,0
+Spain,Y,,2510769,en,EU,Europe,ES,1
+Sri Lanka,Y,,1227603,en,AS,Asia,LK,0
+St Kitts and Nevis,Y,,3575174,en,NA,North America,KN,0
+Sudan,Y,,366755,en,AF,Africa,SD,0
+Suriname,Y,,3382998,en,SA,South America,SR,0
+Svalbard and Jan Mayen,Y,,607072,en,EU,Europe,SJ,0
+Sweden,Y,,2661886,en,EU,Europe,SE,1
+Switzerland,Y,,2658434,en,EU,Europe,CH,0
+Syria,Y,,163843,en,AS,Asia,SY,0
+Taiwan,Y,,1668284,en,AS,Asia,TW,0
+Tajikistan,Y,,1220409,en,AS,Asia,TJ,0
+Tanzania,Y,,149590,en,AF,Africa,TZ,0
+Thailand,Y,,1605651,en,AS,Asia,TH,0
+Togo,Y,,2363686,en,AF,Africa,TG,0
+Tokelau,Y,,4031074,en,OC,Oceania,TK,0
+Tonga,Y,,4032283,en,OC,Oceania,TO,0
+Trinidad and Tobago,Y,,3573591,en,NA,North America,TT,0
+Tunisia,Y,,2464461,en,AF,Africa,TN,0
+Turkey,Y,,298795,en,AS,Asia,TR,0
+Turkmenistan,Y,,1218197,en,AS,Asia,TM,0
+Turks and Caicos Islands,Y,,3576916,en,NA,North America,TC,0
+Tuvalu,Y,,2110297,en,OC,Oceania,TV,0
+U.S. Minor Outlying Islands,Y,,5854968,en,OC,Oceania,UM,0
+U.S. Virgin Islands,Y,,4796775,en,NA,North America,VI,0
+Uganda,Y,,226074,en,AF,Africa,UG,0
+Ukraine,Y,,690791,en,EU,Europe,UA,0
+United Arab Emirates,Y,,290557,en,AS,Asia,AE,0
+United Kingdom,Y,,2635167,en,EU,Europe,GB,1
+United States,Y,,6252001,en,NA,North America,US,0
+Uruguay,Y,,3439705,en,SA,South America,UY,0
+Uzbekistan,Y,,1512440,en,AS,Asia,UZ,0
+Vanuatu,Y,,2134431,en,OC,Oceania,VU,0
+Vatican City,Y,,3164670,en,EU,Europe,VA,0
+Venezuela,Y,,3625428,en,SA,South America,VE,0
+Vietnam,Y,,1562822,en,AS,Asia,VN,0
+Wallis and Futuna,Y,,4034749,en,OC,Oceania,WF,0
+Western Sahara,Y,,2461445,en,AF,Africa,EH,0
+Yemen,Y,,69543,en,AS,Asia,YE,0
+Zambia,Y,,895949,en,AF,Africa,ZM,0
+Zimbabwe,Y,,878675,en,AF,Africa,ZW,0
+,Y,,6255147,en,AS,Asia,,0
+,Y,,6255148,en,EU,Europe,,0

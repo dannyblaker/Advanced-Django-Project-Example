@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <!-- Register Interest by specifying country : feedback -->
+    {% if result_mailchimp == "success" %}
+        <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+            <p id="status_message" class="alert alert-success" role="alert" style="display:block">Success! Thanks for your applying. We'll notify you of your application status as soon as we've had a chance to review it. Please allow a few days for a response.</p>
+        </div>
+    {% elif result_mailchimp == "fail" %}
+        <div id="message" style="position:absolute; bottom: 65px; right: 20px; z-index: 10">
+            <p id="status_message" class="alert alert-danger" role="alert" style="display:block">Thanks! We have already received an application for this email address. We'll let you know your application status once we've had a chance to review.</p>
+        </div>
+    {% else %}
+
+    {% endif %}
+
+    <div class="mobile_suggestion">
+        &nbsp;
+        <p class="text-center" style="color: #adb5bd">Please view on your desktop for the best experience!</p>
+    </div>
+
+    <div id="affiliate_form_start"></div>
+
+    <form id="form-submit" method="POST" action="{% url 'affiliates' %}">
+        <div class="container">
+            <div class="row">
+
+                {% csrf_token %}
+
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+
+                    <div class="other-country-node">
+                        <h4 style="line-height: 1.8em;">Thank you for your interest in Horizon!</h4>
+                        &nbsp;
+                        <h4>Kindly enter your details below to apply.</h4>
+                        &nbsp;
+                    </div>
+                    <div class="form-group">
+                        <h6>Please select the affiliate program you are interested in.</h6>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="affiliate_type" id="referral_radio"
+                                   value="referral" checked>
+                            <label class="form-check-label" for="referral_radio">
+                                Referral Affiliate
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="affiliate_type" id="support_radio"
+                                   value="support">
+                            <label class="form-check-label" for="support_radio">
+                                Support Affiliate
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-pill" placeholder="First name *"
+                               name="first_name" required>
+                    </div>
+                    <div class="form-group" id="last-name-field">
+                        <input type="text" class="form-control rounded-pill" placeholder="Last name *"
+                               name="last_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control rounded-pill" placeholder="Your email address *"
+                               name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control rounded-pill" type="tel" id="phone" name="phone"
+                               placeholder="Your phone number *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-pill"
+                               placeholder="Your company or organisation" name="company_name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-pill"
+                               placeholder="Your personal or company business number *" name="business_number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-pill"
+                               placeholder="Your address *" name="address">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-pill" name="country"
+                               placeholder="Your country name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-pill" name="website"
+                               placeholder="Website (optional but recommended)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-pill" name="linkedin"
+                               placeholder="Linkedin (optional but recommended)">
+                    </div>
+
+
+                    <br>
+                    <br>
+                    <h4 id="referral-affiliate-title">Please review our Referral Affiliate Agreement</h4>
+                    <h4 id="support-affiliate-title">Please review our Support Affiliate Agreement</h4>
+                    <br>
+                    <p>If you have any questions about our affiliate program? Kindly <a
+                            href="#">contact us here.</a> We're happy to help!</p>
+
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" name="agreement" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                I agree to the terms and conditions set forth in the Horizon Agreement
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary btn-block rounded-pill" value="Apply Now">
+
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        if ($('#referral_radio').is(':checked')) {
+            $('#referral-affiliate-title').show();
+            $('#referral_agreement').show();
+        }else{
+            $('#referral-affiliate-title').hide();
+            $('#referral_agreement').hide();
+        }
+
+
+        if ($('#support_radio').is(':checked')) {
+            $('#support-affiliate-title').show();
+            $('#support_agreement').show();
+        }else{
+            $('#support-affiliate-title').hide();
+            $('#support_agreement').hide();
+        }
+
+        $("#referral_radio").change(function() {
+            if ($('#referral_radio').is(':checked')) {
+                $('#referral-affiliate-title').show();
+                $('#referral_agreement').show();
+                $('#support-affiliate-title').hide();
+                $('#support_agreement').hide()
+            }else{
+                $('#referral-affiliate-title').hide();
+                $('#referral_agreement').hide();
+                $('#support-affiliate-title').show();
+                $('#support_agreement').show();
+            }
+        });
+
+        $("#support_radio").change(function() {
+            if ($('#support_radio').is(':checked')) {
+                $('#support-affiliate-title').show();
+                $('#support_agreement').show();
+                $('#referral-affiliate-title').hide();
+                $('#referral_agreement').hide();
+            }else{
+                $('#referral-affiliate-title').show();
+                $('#referral_agreement').show();
+                $('#support-affiliate-title').hide();
+                $('#support_agreement').hide()
+            }
+        });
+
+        $('#message').fadeIn(2000).delay(8000).fadeOut(500);
+        $('[data-toggle="tooltip"]').tooltip();
+
+    </script>
+{% endblock content %}
