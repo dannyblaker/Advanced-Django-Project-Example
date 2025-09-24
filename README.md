@@ -18,7 +18,10 @@ This repository is a website I built which showcases how you can use python to a
 
 I invite you to use this project as a source of inspiration for your own advanced Django projects.
 
-Enjoy!
+You are welcome to use this code in your commercial projects, all that I ask in return is that you credit my work by providing a link back to this repository.
+
+Thank you & Enjoy!
+
 ## Background
 
 I originally built this project for a client, therefore I have deleted and / or anonymized all sensitive content. I have replaced the original product name with the mock name "Horizon" throughout. 
