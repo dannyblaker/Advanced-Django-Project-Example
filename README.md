@@ -1,3 +1,5 @@
+![django logo](django-logo.svg)
+
 # About this repository
 
 ## Summary
